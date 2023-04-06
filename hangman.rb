@@ -17,5 +17,6 @@ def hangman (word, guesses)
   array.join("") #make it a string IAW lesson
 end
 
+
 p hangman("bob",["b"])
 p hangman("alphabet",["a","h"])
