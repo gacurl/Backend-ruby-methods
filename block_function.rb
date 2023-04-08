@@ -4,28 +4,15 @@
 # pass a block that multiplies the two numbers.  Your program should print out 16 and 63.
 
 def do_calc
-  yield
-  yield
+  yield(7, 9)
 end
 
-# so I don't follow the paths here - need some help with understanding this
-
-def do_calc
-  value1 = 7
-  value2 = 9
-  sum = value1 + value2
-  puts sum
-  multiply = value1 * value2
-  puts multiply
+do_calc do |a, b|
+  puts a + b
 end
 
-# def my_method
-#   value = yield
-#   puts "value is: #{value}"
-# end
+do_calc do |a, b|
+  puts a * b
+end
 
-# my_method do
-#   2
-# end
-
-do_calc
+# specifying the block to tell it what I want it do when called
